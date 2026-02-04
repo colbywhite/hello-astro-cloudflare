@@ -1,4 +1,4 @@
-name = "hello-astro"
+name = "hello-astro-cloudflare"
 main = "dist/_worker.js/index.js"
 compatibility_date = "2026-02-04"
 compatibility_flags = [
