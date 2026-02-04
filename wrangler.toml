@@ -1,0 +1,14 @@
+name = "hello-astro"
+main = "dist/_worker.js/index.js"
+compatibility_date = "2026-02-04"
+compatibility_flags = [
+    "nodejs_compat",
+    "global_fetch_strictly_public"
+]
+
+[assets]
+binding = "ASSETS"
+directory = "./dist"
+
+[observability]
+enabled = true
