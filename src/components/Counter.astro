@@ -1,0 +1,40 @@
+<div class="counter">
+    <button class="decrement" aria-label="subtract">-</button>
+    <pre class="count">0</pre>
+    <button class="increment" aria-label="add">+</button>
+</div>
+
+<div class="counter-message">
+    <slot/>
+</div>
+
+<script>
+    const addBtn = document.querySelector('.increment');
+    const subtractButton = document.querySelector('.decrement');
+    const countDisplay = document.querySelector('.count');
+    let count = 0;
+
+    function update() {
+        if (countDisplay) {
+            countDisplay.textContent = count.toString();
+        }
+    }
+
+    addBtn?.addEventListener('click', () => {
+        count++;
+        update();
+    });
+
+    subtractButton?.addEventListener('click', () => {
+        count--;
+        update();
+    });
+</script>
+
+<style>
+    .counter {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+</style>
